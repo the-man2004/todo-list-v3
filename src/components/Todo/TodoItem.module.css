@@ -1,0 +1,16 @@
+.card {
+  border-radius: 1rem;
+  background-color: #fff;
+  padding: 0.2em 1em;
+  margin: 0.5rem;
+
+  list-style: none;
+}
+
+.delete-btn {
+  background-color: red;
+  color: black;
+  border: none;
+
+  cursor: pointer;
+}

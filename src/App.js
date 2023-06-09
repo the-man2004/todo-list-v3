@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import "./App.css";
 import Form from "./components/form/Form";
+import TodoWrapper from "./components/UI/TodoWrapper";
+import TodoItem from "./components/Todo/TodoItem";
+import "./App.css";
 
 function App() {
   const [todos, setTodos] = useState([
@@ -17,12 +19,17 @@ function App() {
   console.log(todos);
 
   const addTodoHandler = (newTodo) => {
-    setTodos((prevTodos) => [...prevTodos, newTodo]);
+    setTodos((prevTodos) => [newTodo, ...prevTodos]);
   };
 
   return (
     <React.Fragment>
       <Form onSubmit={addTodoHandler} />
+      <TodoWrapper>
+        {todos.map((todo) => (
+          <TodoItem key={todo.id} id={todo.id} todo={todo.todo} />
+        ))}
+      </TodoWrapper>
     </React.Fragment>
   );
 }
