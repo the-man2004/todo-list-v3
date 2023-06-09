@@ -5,12 +5,25 @@
   margin: 0.5rem;
 
   list-style: none;
+  display: flex;
+}
+
+.title {
+  margin-left: 0.5em;
 }
 
 .delete-btn {
   background-color: red;
   color: black;
+  font-weight: 700;
+
   border: none;
+  border-radius: 100px;
+
+  padding: 0.4em 0.8em;
+  margin-top: auto;
+  margin-left: auto;
+  margin-bottom: auto;
 
   cursor: pointer;
 }

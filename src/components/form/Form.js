@@ -18,6 +18,7 @@ const Form = (props) => {
     if (todo !== "") {
       props.onSubmit({
         todo: todo,
+        checked: false,
         id: Math.random(),
       });
 
