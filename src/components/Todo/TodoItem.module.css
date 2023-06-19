@@ -10,6 +10,11 @@
 
 .title {
   margin-left: 0.5em;
+  font-weight: 700;
+}
+
+.line-through {
+  text-decoration: line-through;
 }
 
 .delete-btn {

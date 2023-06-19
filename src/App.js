@@ -30,6 +30,10 @@ function App() {
     });
   };
 
+  const changeCheckedHandler = (id) => {
+    console.log("Clicked input! " + id);
+  };
+
   return (
     <React.Fragment>
       <Form onSubmit={addTodoHandler} />
@@ -41,6 +45,7 @@ function App() {
             id={todo.id}
             todo={todo.todo}
             onDelete={deleteTodoHandler}
+            onChecked={changeCheckedHandler}
           />
         ))}
       </TodoWrapper>

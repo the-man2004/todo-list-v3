@@ -9,11 +9,24 @@ const TodoItem = (props) => {
     props.onDelete(props.id);
   };
 
+  const checkedHandler = () => {
+    props.onChecked(props.id);
+  };
+
+  const titleClasses = `${classes.title} ${
+    props.checked ? classes["line-through"] : ""
+  }`;
+
+  const input = props.checked ? (
+    <input checked type="checkbox" onChange={checkedHandler} />
+  ) : (
+    <input type="checkbox" onChange={checkedHandler} />
+  );
+
   return (
     <li className={classes.card}>
-      <input type="checkbox" />
-
-      <p className={classes.title}>{props.todo}</p>
+      {input}
+      <p className={titleClasses}>{props.todo}</p>
       <button onClick={deleteHandler} className={classes["delete-btn"]}>
         remove
       </button>
